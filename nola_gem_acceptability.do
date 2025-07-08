@@ -393,13 +393,6 @@ list aces_sum aces_mdn, sep(0)
 recode aces_mdn (1=0) (2=1)	
 tab aces_mdn	
 
-* discrimination vigilance - iem-wise "identities most discriminated against"	
-
-tab discrimination_5___1
-tab discrimination_5___2
-tab discrimination_5___3
-tab discrimination_5___4
-	
 * HIV stigma - median-split	
 
 summ hiv_stigma_sum, detail	
@@ -420,8 +413,7 @@ save nola_gem_acceptability, replace
 	
 * drivers of privacy concerns - exploratory (both arms)
 
-foreach i in gend_bin sexual_minority hiv_stigma_mdn aces_mdn ///
-	discrimination_5___1 discrimination_5___1 discrimination_5___1 discrimination_5___1 {
+foreach i in gend_bin sexual_minority hiv_stigma_mdn aces_mdn {
 	logit priv_bin `i', or nolog
 	} 
 
