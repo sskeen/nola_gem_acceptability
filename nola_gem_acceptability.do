@@ -3,7 +3,7 @@
 		*															*
 		*	Acceptability, feasibility, and usability of NOLA Gem   *
 		*		nola_gem_acceptability.do							*
-		*		Simone J. Skeen (06-28-2025)						*
+		*		Simone J. Skeen (07-12-2025)						*
 		*															*
 		*-----------------------------------------------------------*
 
@@ -96,7 +96,7 @@ drop *_str
 
 save nola_gem_baseline, replace	
 
-/* pre-merge inspect / sanity check
+/* pre-merge inspect / sense check
 
 use nola_gem_post_assessment, clear
 list id arm, sep(0)
@@ -226,6 +226,8 @@ save nola_gem_acceptability, replace
 
 keep if arm == 1
 export delimited nola_gem_acceptability_no_loc_tx.csv
+
+		************************** Table 3 paradata descriptives in Py: nola_gem_acceptability.ipynb ***************************
 
 		********************* Fig. 1 / Fig. 2 categorical scatterplots in Py: nola_gem_acceptability.ipynb *********************	
 
@@ -411,19 +413,13 @@ replace priv_bin = 1 if (app4 > 1)
 
 save nola_gem_acceptability, replace		
 	
-* drivers of privacy concerns - exploratory (both arms)
+* drivers of privacy concerns - exploratory (condition-agnostic; N = 30)
 
 foreach i in gend_bin sexual_minority hiv_stigma_mdn aces_mdn {
 	logit priv_bin `i', or nolog
 	} 
 
-		*** SJS 6/28: N = 30; privacy concerns likely to transcend conditions (GEMA universal)
-	
-		*** SJS 6/28: null
-
-		* transform outcomes
-
-		*** SJS 6/28: 6/"NA" values already converted to "." at recode
+* transform outcomes /// values already converted to "." at recode
 
 gen app3_bin = 0
 replace app3_bin = 1 if (app3_rev > 1)		
@@ -450,8 +446,6 @@ foreach i in gend_bin race_bin ethnicity educ_bin ///
 	digi_mdn {
 	logit intervention7_rev_bin `i' if arm == 1, or nolog 
 	} 	
-	
-		*** SJS 6/28: null
 	
 		*----------------------------------*
 		* End of nola_gem_acceptability.do *			
