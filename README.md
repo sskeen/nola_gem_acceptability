@@ -1,7 +1,7 @@
-## Acceptability, feasibility, and user experiences of 💎 NOLA Gem: a geospatially customizable culturally tailored JITAI for violence-affected people living with HIV
+## Acceptability, feasibility, and user experiences of 💎 NOLA Gem: a geospatially customizable culturally tailored just-in-time adaptive intervention for violence-affected people living with HIV
 [Simone J. Skeen](https://simoneskeen.xyz/);  Stephanie Tokarz;  Rayna E. Gasik;  Ethan A. Smith;  Katherine P. Theall;  Gretchen A. Clum
 
-Data science codebase (Stata `.do` $+$ Python `.py`, `.ipynb`) for the NOLA Gem Aim III pilot study. Funded by National Institute on Alcohol Abuse and Alcoholism (NIAAA) R34AA028961 and P60AA009803. Data are archived on the Data Archive (NIAAA<sub>DA</sub>).
+Data science codebase (Stata `.do` $+$ Python `.py`, `.ipynb`) for the NOLA Gem Aim III pilot study. Funded by National Institute on Alcohol Abuse and Alcoholism (NIAAA) R34AA028961 and P60AA009803. Data are archived on the NIAAA Data Archive ([NIAAA<sub>DA</sub>](https://nda.nih.gov/niaaa)).
 
 ![Four screencaps of a smartphone app in cool shades of green and blue on beige. The first displays a "My Skills" menu wih options such as "Adaptive Coping." The second displays a "Sessions" menu with options such as "Challenging Negative Thoughts." The thrid displays a smartphone-delivered survey question: "Since your last diary, how much stress did you feel today from any of the following? c. Seeing someone get robbed, injured, or threatened." The fourth displays a recommendation from the "My Skills" options based on the user's response.](images/nola_gem_acceptability_fig_1.jpg)
 _The NOLA Gem+GEMA user interface: panel a. (left) displays the “My Skills” and “Sessions” menus; panel b. (right) displays a sample daily diary and resultant skills recommendation prompt._ 
