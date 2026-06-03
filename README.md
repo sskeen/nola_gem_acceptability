@@ -8,7 +8,7 @@ International Registered Report Identifier (IRRID): [PRR1-10.2196/47151](https:/
 
 1. Skeen SJ, Tokarz S, Gasik RE, et al. A trauma-informed, geospatially aware, just-in-time adaptive mHealth intervention to support effective coping skills among people living with HIV in New Orleans: development and protocol for a pilot randomized controlled trial. JMIR Res Protoc. 2023;12:e47151. [doi: 10.2196/47151] (peer-reviewed background, motivation, and preregistered protocol).
 
-2. Skeen SJ, Tokarz S, Gasik RE, Smith EA, Theall KP, Clum GA. xx. JMIR Hum Factors. 2026;13:e80705. [doi: 10.2196/80705] (peer-reviewed primary outcomes paper).
+2. Skeen SJ, Tokarz S, Gasik RE, Smith EA, Theall KP, Clum GA. A geospatially customizable culturally tailored just-in-time adaptive intervention for violence-affected people living with HIV: mixed-methods acceptability, feasibility, and user experience study. JMIR Hum Factors. 2026;13:e80705. [doi: 10.2196/80705] (peer-reviewed primary outcomes paper).
 
 ![Four screencaps of a smartphone app in cool shades of green and blue on beige. The first displays a "My Skills" menu wih options such as "Adaptive Coping." The second displays a "Sessions" menu with options such as "Challenging Negative Thoughts." The thrid displays a smartphone-delivered survey question: "Since your last diary, how much stress did you feel today from any of the following? c. Seeing someone get robbed, injured, or threatened." The fourth displays a recommendation from the "My Skills" options based on the user's response.](images/nola_gem_acceptability_fig_1.jpg)
 _The NOLA Gem+GEMA user interface: panel a. (left) displays the “My Skills” and “Sessions” menus; panel b. (right) displays a sample daily diary and resultant skills recommendation prompt._ 
