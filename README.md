@@ -1,5 +1,5 @@
 # Acceptability, feasibility, and UX of 💎 NOLA Gem: a geospatially customizable culturally tailored just-in-time adaptive intervention for violence-affected people living with HIV
-[Simone J. Skeen](https://simoneskeen.xyz/);  Stephanie Tokarz;  Rayna E. Gasik;  Ethan A. Smith;  Katherine P. Theall;  Gretchen A. Clum
+**[Simone J. Skeen](https://simoneskeen.xyz/);  Stephanie Tokarz;  Rayna E. Gasik;  Ethan A. Smith;  Katherine P. Theall;  Gretchen A. Clum**
 
 Data science codebase for the 💎 NOLA Gem Aim III pilot study. Funded by National Institute on Alcohol Abuse and Alcoholism (NIAAA) R34AA028961 and P60AA009803. Data are archived on the NIAAA Data Archive ([NIAAA<sub>DA</sub>](https://nda.nih.gov/niaaa)).
 
