@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Env variables (private paths)
+.env
+
+# Data
+*.csv
+*.dta
+*.xlsx
+
+# Python
+__pycache__/
+*.pyc
