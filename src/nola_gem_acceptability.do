@@ -5,10 +5,12 @@
 		*	Descriptives, viz. / exploratory modeling for disparities in uptake.     *
 		*																		     *
 		*		nola_gem_acceptability.do										     *
-		*		Simone J. Skeen (01-28-2025)									     *
+		*		Simone J. Skeen (06-04-2026)									     *
 		*																		     *
 		* -------------------------------------------------------------------------- *
 
+* clear memory / enable continuous output			
+		
 clear all
 set more off
 
@@ -22,14 +24,44 @@ log using nola_gem_acceptability_log.txt, replace
 set scheme white_tableau
 graph set window fontface "Arial"
 
-		
+* /////////// map subdirectory structure
+
+* .
+* ├── data/
+* │   ├── paradata
+* │   ├── pilot
+* │   └── qualitative
+* ├── notebooks
+* ├── outputs/
+* │   └── figures
+* └── src	
+	
+* /////////// configure paths
+
+* project root
+
+
+global root "~/anaconda_projects/nola_gem_acceptability"	
+cd "$root"	
+
+/*
+mkdir "$root/data"
+
+mkdir "$root/data/paradata"
+global paradata "$root/data/paradata"
+
+mkdir "$root/data/pilot"
+global pilot "$root/data/pilot"
+
+*/
+	
+	
 		///////////////// *------------------------------------* /////////////////
 		///////////////// *     1. Transform, clean, merge     * /////////////////
 		///////////////// *------------------------------------* /////////////////
 
-
-cd "~/Documents/02_tulane/01_research/nola_gem/dissem/skeen,etal_acceptability/data"
 clear
+cd "$root/data/pilot"
 
 * /////////// import post_assessment - raw
 
@@ -54,6 +86,7 @@ clear
 
 	* truncate intervention* varlist	
 		
+**# Bookmark #2
 	rename intervention# int#	
 		
 	* destring `id'
@@ -243,10 +276,12 @@ foreach i in int1 int2 int3 ///
 
 save, replace	
 	
-*save nola_gem_acceptability_no_loc_tx - .csv to matplotlib
+* save nola_gem_acceptability_no_loc_tx (treatment-arm only) - .csv to matplotlib
 
 keep if arm == 1
 export delim nola_gem_acceptability_no_loc_tx.csv, replace
+
+* restore nola_gem_acceptability.dta (treatment & control arms) 
 	
 use nola_gem_acceptability, clear		
 		
@@ -306,6 +341,8 @@ foreach i in ueq1 ueq2 ueq3 ueq4 ueq5 ueq6 ueq7 ueq8 {
 	
 		* --------------------------------------------------------------------------------------------- *
 
+
+use nola_gem_acceptability, clear			
 		
 * NPS: Net Promoter Score
 
@@ -403,7 +440,7 @@ save, replace
 
 	xtile digi_mdn = digi_sum, nq(2)
 	list digi_sum digi_mdn, sep(0)
-	digi_mdn (1 = 0) (2 = 1)	
+	recode digi_mdn (1 = 0) (2 = 1)	
 	*tab digi_mdn	
 	
 	* aces - median split
@@ -432,39 +469,47 @@ save, replace
 
 	save, replace		
 
-	* ///////////// Model 0a (logit): y_i = privacy concerns - exploratory (condition-agnostic; N = 30) /////////////
-	
+	* ///////////// Model 0a (logit): y_i = privacy concerns /////////////
+	* ///////////// exploratory (condition-agnostic; N = 30) /////////////
 	
 	foreach i in gend_bin sexual_minority hiv_stigma_mdn aces_mdn {
 		logit priv_bin `i', or nolog
 		} 
+
+	* ///////////////////////////////////////////////////////////////////	
+	
+use nola_gem_acceptability, clear
 
 	* transform outcomes // values already converted to "." at recode
 
 	gen app3_bin = 0
 	replace app3_bin = 1 if (app3_rev > 1)		
 		
-	foreach i in intervention1_rev intervention4_rev intervention6_rev /// 
-		intervention7_rev intervention8_rev intervention9_rev intervention10_rev {	
+	foreach i in int1_rev int4_rev int6_rev /// 
+		int7_rev int8_rev int9_rev int10_rev {	
 		gen `i'_bin = 0
-		`i'_bin = 1 if (`i' > 2)		
+		replace `i'_bin = 1 if (`i' > 2)		
 		*list `i' `i'_bin, sep(0)		
-}				
-	foreach i in intervention11_rev intervention12_rev /// 
-		intervention14_rev intervention15_rev intervention16_rev {	
+		}
+		
+	foreach i in int11_rev int12_rev /// 
+		int14_rev int15_rev int16_rev {	
 		gen `i'_bin = 0
 		replace `i'_bin = 1 if (`i' > 1)
 		*list `i' `i'_bin, sep(0)		
-}			
+		}			
 
-	* ////////////////// Model 0b (logit): y_i = acceptability - exploratory (tx arm only; n = 22) //////////////////	
+	* ////////////////// Model 0b (logit): y_i = acceptability //////////////////
+	* //////////////////// exploratory (tx arm only; n = 22) ////////////////////	
 	
 	foreach i in gend_bin race_bin ethnicity educ_bin ///
 		q1_audit_bin asi_d10a_bin asi_d8a_bin asi_opiates_bin asi_d13a_bin ///
 		ptsd_clinical_cutoff pcl_bin trauma_cog_mdn ptgi_mdn digi_mdn {
-		logit intervention7_rev_bin `i' if arm == 1, or nolog 
+		logit int7_rev_bin `i' if arm == 1, or nolog 
 		} 	
-				
+
+	* ///////////////////////////////////////////////////////////////////			
+		
 		* -------------------------------------- *
 		*    End of nola_gem_acceptability.do    *			
 		* -------------------------------------- *	 
