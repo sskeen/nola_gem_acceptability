@@ -25,43 +25,32 @@ set scheme white_tableau
 graph set window fontface "Arial"
 
 * /////////// map subdirectory structure
-
 * .
 * ├── data/
-* │   ├── paradata
-* │   ├── pilot
-* │   └── qualitative
-* ├── notebooks
-* ├── outputs/
-* │   └── figures
+* │   └── pilot
 * └── src	
 	
 * /////////// configure paths
 
 * project root
 
-
 global root "~/anaconda_projects/nola_gem_acceptability"	
 cd "$root"	
 
-/*
-mkdir "$root/data"
+* create subdirectories
 
-mkdir "$root/data/paradata"
-global paradata "$root/data/paradata"
+mkdir "$root/data"
 
 mkdir "$root/data/pilot"
 global pilot "$root/data/pilot"
 
-*/
-	
-	
+
 		///////////////// *------------------------------------* /////////////////
 		///////////////// *     1. Transform, clean, merge     * /////////////////
 		///////////////// *------------------------------------* /////////////////
 
 clear
-cd "$root/data/pilot"
+cd "$pilot"
 
 * /////////// import post_assessment - raw
 
@@ -187,7 +176,6 @@ foreach i in digital_self_conf1 digital_self_conf2 ///
 	tab `i'_rev
 	}
 
-	
 		* --------------------------------------------------------------------------------------------- *
 
 		dis "Table 1. Baseline socio-demographic attributes and digital confidence: NOLA Gem pilot"	
@@ -211,7 +199,6 @@ foreach i in digital_self_conf1 digital_self_conf2 ///
 			}
 
 		* --------------------------------------------------------------------------------------------- *
-
 		
 * /////////// add'l descriptives - narr results		
 		
@@ -237,7 +224,6 @@ foreach i in app6 app46 app8 {
 	tab `i'
 	tab `i'_rev
 	}
-
 	
 		* --------------------------------------------------------------------------------------------- *	
 	
@@ -251,7 +237,6 @@ foreach i in app6 app46 app8 {
 			}
 
 		* --------------------------------------------------------------------------------------------- *
-	
 	
 * exploratory: cross-arm diff		
 		
@@ -295,7 +280,6 @@ foreach i in ueq1 ueq2 ueq3 ueq4 ueq5 ueq6 ueq7 ueq8 {
 	summ `i' if arm == 0
 *	tab `i'
 	}	
-
 	
 		* --------------------------------------------------------------------------------------------- *
 	
@@ -339,7 +323,6 @@ foreach i in ueq1 ueq2 ueq3 ueq4 ueq5 ueq6 ueq7 ueq8 {
 		*grid	
 	
 		* --------------------------------------------------------------------------------------------- *
-
 
 use nola_gem_acceptability, clear			
 		
