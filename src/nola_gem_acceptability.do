@@ -86,7 +86,6 @@ cd "$root/data/pilot"
 
 	* truncate intervention* varlist	
 		
-**# Bookmark #2
 	rename intervention# int#	
 		
 	* destring `id'
@@ -170,7 +169,7 @@ cd "$root/data/pilot"
 	save nola_gem_acceptability, replace		 
 
 		///////////////// * ------------------------ * /////////////////
-		///////////////// *     1. Acceptability     * /////////////////
+		///////////////// *     2. Acceptability     * /////////////////
 		///////////////// * ------------------------ * /////////////////	
 
 use nola_gem_acceptability, clear		

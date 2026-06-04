@@ -2,6 +2,8 @@ matplotlib
 numpy
 ollama
 pandas
+pyyaml
 requests
 scikit-learn
 seaborn
+stata_setup

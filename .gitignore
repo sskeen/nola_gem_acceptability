@@ -10,7 +10,7 @@
 *.xlsx
 
 # Log (Stata)
-nola_gem_acceptability_log.txt
+*_log.txt
 
 # Python
 __pycache__/
