@@ -1,5 +1,5 @@
 # Acceptability, feasibility, and user experiences of 💎 NOLA Gem: a geospatially customizable culturally tailored just-in-time adaptive intervention for violence-affected people living with HIV
-## 🔨 Open code repository: Skeen et al. _JMIR Hum Factors._ [doi: 10.2196/80705](https://preprints.jmir.org/preprint/80705) 
+## 🔨 Open code repository:[^1] Skeen et al. _JMIR Hum Factors._ [doi: 10.2196/80705](https://preprints.jmir.org/preprint/80705) 
 **[Simone J. Skeen](https://simoneskeen.xyz/);  Stephanie Tokarz;  Rayna E. Gasik;  Ethan A. Smith;  Katherine P. Theall;  Gretchen A. Clum**
 
 ### Abstract
@@ -19,4 +19,6 @@ International Registered Report Identifier (IRRID): [PRR1-10.2196/47151](https:/
 1. Skeen SJ, Tokarz S, Gasik RE, et al. A trauma-informed, geospatially aware, just-in-time adaptive mHealth intervention to support effective coping skills among people living with HIV in New Orleans: development and protocol for a pilot randomized controlled trial. _JMIR Res Protoc_. 2023;12:e47151. [doi: 10.2196/47151](https://pubmed.ncbi.nlm.nih.gov/37874637/) ••Peer-reviewed background, motivation, and preregistered protocol.
 
 2. Skeen SJ, Tokarz S, Gasik RE, Smith EA, Theall KP, Clum GA. A geospatially customizable culturally tailored just-in-time adaptive intervention for violence-affected people living with HIV: mixed-methods acceptability, feasibility, and user experience study. _JMIR Hum Factors_. 2026;13:e80705. [doi: 10.2196/80705](https://preprints.jmir.org/preprint/80705) ••Peer-reviewed primary outcomes paper (in press).
+
+[^1]: In line with NIAAA mandates, data are presently restricted.
 
