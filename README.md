@@ -1,7 +1,7 @@
-## Acceptability, feasibility, and user experiences of 💎 NOLA Gem: a geospatially customizable culturally tailored just-in-time adaptive intervention for violence-affected people living with HIV
+## 💎 Acceptability, feasibility, and user experiences of NOLA Gem: a geospatially customizable culturally tailored just-in-time adaptive intervention for violence-affected people living with HIV[^1]
 **[Simone J. Skeen](https://simoneskeen.xyz/);  Stephanie Tokarz;  Rayna E. Gasik;  Ethan A. Smith;  Katherine P. Theall;  Gretchen A. Clum**
 
-Funded by NIAAA: [R34AA028961](https://reporter.nih.gov/search/UYktPiAZAUyDwu56SF95Zw/project-details/10404946)[^1]<br>
+Funded by NIAAA: [R34AA028961](https://reporter.nih.gov/search/UYktPiAZAUyDwu56SF95Zw/project-details/10404946)<br>
 Trial Registration: [ClinicalTrials.gov NCT05784714](https://clinicaltrials.gov/study/NCT05784714)<br>
 International Registered Report Identifier: [PRR1-10.2196/47151](https://www.researchprotocols.org/2023/1/e47151)<br>
 Primary outcomes: [doi: 10.2196/80705](https://humanfactors.jmir.org/2026/1/e80705)<br>
